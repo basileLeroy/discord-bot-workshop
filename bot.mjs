@@ -58,7 +58,7 @@ app.get('/test', async (req, res) => {
         const channel = bot.channels.cache.get(process.env['DISCORD_CHANNEL_ID']);
         const role = process.env['DISCORD_ROLE_ID'];
 
-        let message = `Hey <@&${role}> !`;
+        let message = `Hey <@&${role}> !\n\nLet's get started with our workshop!`;
         channel.send(message);
         return res.status(200).send('{ "success" : "Message has been triggered" }');
     }
